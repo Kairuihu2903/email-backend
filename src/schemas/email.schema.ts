@@ -13,4 +13,12 @@ export class Email extends Document {
   body: string;
 }
 
+@Schema()
+export class User extends Document {
+  @Prop({ required: true })
+  name: string;
+}
+
+export const UserSchema = SchemaFactory.createForClass(User);
+
 export const EmailSchema = SchemaFactory.createForClass(Email);
